@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/main.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>
+                Some Title
+            </h1>
+            
+            <p>Please upload your CSV file. The values containing addresses should be in a column named <em>address</em> or <em>Address</em></p>
+            <form method='POST' enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <button id="download">Submit</button>
+            </form>
+            <div class="results">
+                <h3 class="base-pay">{{base_pay_Title}}</h3>
+                <p class="base-pay-mean">{{ base_pay_MEAN }}</p>
+                <p class="base-pay-high">{{base_pay_MAX}}</p>
+                <p class="base-pay-low">{{base_pay_MIN}}</p>
+
+                <h3 class="over-time">{{over_time_Title}}</h3>
+                <p class="over-time-max">{{over_time_MAX}}</p>
+
+                <h3 class="highest-paid">{{highest_paid_Title}}</h3>
+                <p class="highest-paid-person">{{highest_paid_person}}</p>
+                <p class="highest-paid-job">{{highest_paid_job}}</p>
+                <p class="highest-paid-salary">{{highest_paid_salary}}</p>
+
+
+                <h3 class="lowest-paid">{{lowest_pay_Title}}</h3>
+                <p class="lowest-paid-person">{{lowest_paid_person}}</p>
+                <p class="lowest-paid-job">{{lowest_paid_job}}</p>
+                <p class="lowest-paid-salary">{{lowest_paid_salary}}</p>
+                
+
+            </div>
+        </div>
+    </body>
+</html>
